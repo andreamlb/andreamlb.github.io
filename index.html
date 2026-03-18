@@ -160,42 +160,12 @@
     }
 
     .crime-list {
-      list-style: none;
+      list-style: disc;
       margin: 1.2rem 0 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem 0.9rem;
-    }
-
-    .crime-chip {
-      display: inline-flex;
-      align-items: center;
-      width: fit-content;
-      padding: 0;
-      border: 0;
-      background: transparent;
+      padding-left: 1.2rem;
       color: #3c1d4b;
-      font-weight: 500;
-      font-size: 0.96rem;
-      letter-spacing: 0.01em;
-      line-height: 1.6;
-      transition: color 0.2s ease;
-    }
-
-    .crime-chip::before {
-      content: "";
-      width: 0.28rem;
-      height: 0.28rem;
-      margin-right: 0.5rem;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--pink-4), var(--blue-3));
-      opacity: 0.8;
-      flex: 0 0 auto;
-    }
-
-    .crime-chip:hover {
-      color: var(--pink-5);
+      line-height: 1.8;
+      font-size: 0.98rem;
     }
 
     .viz-item {
@@ -286,11 +256,8 @@
       }
 
       .crime-list {
-        gap: 0.35rem 0.8rem;
-      }
-
-      .crime-chip {
         font-size: 0.86rem;
+        line-height: 1.7;
       }
 
       .viz-list-grid {
@@ -333,16 +300,16 @@
       <h2>Focus Crimes</h2>
       <p class="lead">These are the categories I focus on throughout the analysis.</p>
       <ul class="crime-list">
-        <li class="crime-chip">Vehicle Theft</li>
-        <li class="crime-chip">Arson &amp; Fire</li>
-        <li class="crime-chip">Robbery</li>
-        <li class="crime-chip">Vandalism</li>
-        <li class="crime-chip">Burglary</li>
-        <li class="crime-chip">Drug Offense</li>
-        <li class="crime-chip">Weapons</li>
-        <li class="crime-chip">Stolen Property</li>
-        <li class="crime-chip">Forgery Counterfeiting</li>
-        <li class="crime-chip">Theft &amp; Larceny</li>
+        <li>Vehicle Theft</li>
+        <li>Arson &amp; Fire</li>
+        <li>Robbery</li>
+        <li>Vandalism</li>
+        <li>Burglary</li>
+        <li>Drug Offense</li>
+        <li>Weapons</li>
+        <li>Stolen Property</li>
+        <li>Forgery Counterfeiting</li>
+        <li>Theft &amp; Larceny</li>
       </ul>
     </section>
 
