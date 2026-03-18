@@ -165,38 +165,37 @@
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.55rem;
+      gap: 0.4rem 0.9rem;
     }
 
     .crime-chip {
       display: inline-flex;
       align-items: center;
       width: fit-content;
-      border-radius: 999px;
-      padding: 0.45rem 0.82rem;
-      border: 1px solid rgba(47, 140, 196, 0.24);
-      background: rgba(255, 255, 255, 0.45);
-      color: #452053;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #3c1d4b;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 0.96rem;
       letter-spacing: 0.01em;
-      transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+      line-height: 1.6;
+      transition: color 0.2s ease;
     }
 
     .crime-chip::before {
       content: "";
-      width: 0.38rem;
-      height: 0.38rem;
-      margin-right: 0.45rem;
+      width: 0.28rem;
+      height: 0.28rem;
+      margin-right: 0.5rem;
       border-radius: 50%;
-      background: var(--blue-3);
+      background: linear-gradient(135deg, var(--pink-4), var(--blue-3));
+      opacity: 0.8;
       flex: 0 0 auto;
     }
 
     .crime-chip:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, 0.62);
-      border-color: rgba(232, 71, 155, 0.38);
+      color: var(--pink-5);
     }
 
     .viz-item {
@@ -287,12 +286,11 @@
       }
 
       .crime-list {
-        gap: 0.48rem;
+        gap: 0.35rem 0.8rem;
       }
 
       .crime-chip {
-        font-size: 0.84rem;
-        padding: 0.4rem 0.72rem;
+        font-size: 0.86rem;
       }
 
       .viz-list-grid {
