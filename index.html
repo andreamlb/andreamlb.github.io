@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrea's Crime Analysis</title>
+  <title>SF Crime Story | Vehicle Theft Shift</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -78,7 +78,7 @@
     }
 
     .container {
-      width: min(1100px, 94%);
+      width: min(980px, 94%);
       margin: 0 auto;
       padding-bottom: 5rem;
     }
@@ -93,7 +93,7 @@
     }
 
     .hero {
-      min-height: 72vh;
+      min-height: 62vh;
       display: grid;
       align-content: center;
       gap: 1.3rem;
@@ -123,7 +123,7 @@
 
     h1 {
       font-size: clamp(2.2rem, 6vw, 4.2rem);
-      max-width: 14ch;
+      max-width: 18ch;
     }
 
     h2 {
@@ -138,119 +138,86 @@
       margin: 0;
     }
 
-    .scroll-hint {
-      margin-top: 0.5rem;
-      color: var(--pink-5);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
     .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 18px;
       box-shadow: 0 12px 30px rgba(108, 31, 84, 0.09);
-      padding: 1.2rem 1.2rem;
+      padding: 1.15rem 1.15rem;
     }
 
-    .viz-list-grid {
-      margin-top: 1.1rem;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .crime-list {
-      list-style: disc;
-      margin: 1.2rem 0 0;
-      padding-left: 1.2rem;
-      color: #3c1d4b;
-      line-height: 1.8;
-      font-size: 0.98rem;
-      display: block;
-      max-width: 28rem;
-    }
-
-    .crime-list li {
-      display: list-item;
-      margin-bottom: 0.28rem;
-    }
-
-    .viz-item {
-      border-radius: 12px;
-      padding: 1rem;
-      background: rgba(47, 140, 196, 0.08);
-      border: 1px solid rgba(26, 26, 46, 0.12);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .viz-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(26, 26, 46, 0.08);
-    }
-
-    .viz-item h3 {
-      margin: 0 0 0.45rem;
-      font-size: 1.2rem;
-      line-height: 1.2;
-      color: #3f1345;
-    }
-
-    .viz-item p {
-      margin: 0 0 0.75rem;
-      font-size: 0.85rem;
-      line-height: 1.6;
-      color: #4f415d;
-    }
-
-    .viz-item a {
-      text-decoration: none;
-      color: var(--pink-5);
-      font-weight: 600;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .viz-item a:hover {
-      color: var(--blue-3);
-    }
-
-    .story-viz {
-      padding-top: 4rem;
-    }
-
-    .viz-section {
-      display: grid;
-      gap: 1rem;
+    .section-note {
       margin-top: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .scene {
+      margin-top: 1.3rem;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 20px;
       padding: 1rem;
       box-shadow: 0 10px 28px rgba(96, 24, 88, 0.08);
+      display: grid;
+      gap: 0.95rem;
     }
 
-    .viz-section p {
+    .scene h3 {
+      font-size: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    .claim {
+      margin: 0;
+      border-left: 4px solid var(--pink-4);
+      padding: 0.35rem 0.8rem;
+      font-weight: 500;
+      background: rgba(232, 71, 155, 0.09);
+      border-radius: 8px;
+    }
+
+    .scene p {
       margin: 0;
       line-height: 1.75;
     }
 
-    .viz-section img,
-    .viz-section iframe {
+    .scene img,
+    .scene iframe {
       width: 100%;
       border: 1px solid rgba(159, 31, 97, 0.25);
       border-radius: 14px;
       background: #fff;
     }
 
-    .viz-section img {
+    .scene img {
       max-height: 620px;
       object-fit: contain;
     }
 
-    .viz-section iframe {
+    .scene iframe {
       height: 560px;
+    }
+
+    .scene-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--pink-5);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(232, 71, 155, 0.25);
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+    }
+
+    .story-end {
+      font-size: 1.03rem;
+      line-height: 1.8;
     }
 
     .open-link {
@@ -285,21 +252,7 @@
         padding: 3.4rem 0 2.5rem;
       }
 
-      .viz-list-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .crime-list {
-        font-size: 0.86rem;
-        line-height: 1.7;
-        max-width: none;
-      }
-
-      .viz-list-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .viz-section iframe {
+      .scene iframe {
         height: 430px;
       }
 
@@ -312,148 +265,102 @@
 <body>
   <nav class="top-nav">
     <div class="top-nav-inner">
-      <a href="#intro">Intro</a>
-      <a href="#focus-crimes">Focus Crimes</a>
-      <a href="#visual-list">Visualizations</a>
-      <a href="#visual-story">Story View</a>
+      <a href="#intro">Overview</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#scene-1">Scene 1</a>
+      <a href="#scene-2">Scene 2</a>
+      <a href="#scene-3">Scene 3</a>
+      <a href="#conclusion">Conclusion</a>
     </div>
   </nav>
 
   <main class="container">
     <section id="intro" class="hero">
-      <span class="eyebrow">San Francisco Crime Story</span>
-      <h1>Andrea's crime analysis</h1>
+      <span class="eyebrow">Short Data Story</span>
+      <h1>SF Vehicle Theft Did Not Just Rise. It Moved.</h1>
       <p class="lead">
-        This project explores how crime in San Francisco changes across neighborhood and time.
-        The page is structured as a scroll journey: first the focus crimes, then an overview of visualizations,
-        and finally each figure shown one by one with short context.
+        This story follows one argument: San Francisco's vehicle theft pattern changed across years,
+        and the important shift is where and when it happens. Instead of a gallery of unrelated plots,
+        this page is a guided narrative with three visuals that build toward one conclusion.
       </p>
-      <p class="scroll-hint">Scroll down to begin.</p>
     </section>
 
-    <section id="focus-crimes">
-      <h2>Focus Crimes</h2>
-      <p class="lead">These are the categories I focus on throughout the analysis.</p>
-      <ul class="crime-list">
-        <li>Vehicle Theft</li>
-        <li>Arson &amp; Fire</li>
-        <li>Robbery</li>
-        <li>Vandalism</li>
-        <li>Burglary</li>
-        <li>Drug Offense</li>
-        <li>Weapons</li>
-        <li>Stolen Property</li>
-        <li>Forgery Counterfeiting</li>
-        <li>Theft &amp; Larceny</li>
-      </ul>
-    </section>
-
-    <section id="visual-list">
-      <h2>Visualization List</h2>
-      <p class="lead">Quick links to all plots shown further down the page.</p>
-      <div class="viz-list-grid">
-        <article class="viz-item">
-          <h3>All Incidents by Location</h3>
-          <p>A citywide snapshot showing where incidents cluster geographically.</p>
-          <a href="#viz-all-incidents">Jump to visualization</a>
-        </article>
-        <article class="viz-item">
-          <h3>Focus Crimes Over Time</h3>
-          <p>A temporal view of how selected categories rise and fall over years.</p>
-          <a href="#viz-focus-time">Jump to visualization</a>
-        </article>
-        <article class="viz-item">
-          <h3>Heatmap: Category vs District</h3>
-          <p>A matrix comparison of crime category intensity across districts.</p>
-          <a href="#viz-heatmap-district">Jump to visualization</a>
-        </article>
-        <article class="viz-item">
-          <h3>Jitter Plot: Theft &amp; Larceny</h3>
-          <p>A detailed spread view that highlights variation in theft incidents.</p>
-          <a href="#viz-jitter-theft">Jump to visualization</a>
-        </article>
-        <article class="viz-item">
-          <h3>Vehicle Theft Ratio Map</h3>
-          <p>An interactive district map of over- and under-representation.</p>
-          <a href="#viz-vehicle-ratio">Jump to visualization</a>
-        </article>
-        <article class="viz-item">
-          <h3>Drug Offense Scatter Map</h3>
-          <p>A point-based map to explore local hotspots and street-level clusters.</p>
-          <a href="#viz-drug-scatter">Jump to visualization</a>
-        </article>
-        <article class="viz-item">
-          <h3>Theft Heatmap Timeline</h3>
-          <p>An animated heatmap tracking how theft concentration changes by month.</p>
-          <a href="#viz-theft-timeline">Jump to visualization</a>
-        </article>
-        <article class="viz-item">
-          <h3>Normalized Hourly Crime by Year</h3>
-          <p>An hourly profile showing behavior shifts between different years.</p>
-          <a href="#viz-hourly-year">Jump to visualization</a>
-        </article>
+    <section id="dataset">
+      <h2>Dataset and Scope</h2>
+      <div class="card">
+        <p class="section-note">
+          The analysis uses San Francisco Police Department incident reports from 2003 to 2025.
+          Records are merged from the historical and current datasets, then filtered to category-level
+          views that make long-term patterns comparable.
+        </p>
+        <p class="section-note">
+          The focus here is vehicle theft as one case study. The goal is not to explain every category,
+          but to show how a single crime type changes across time, location, and hour of day.
+        </p>
       </div>
     </section>
 
-    <section id="visual-story" class="story-viz">
-      <h2>Visualizations One by One</h2>
-      <p class="lead">Each figure below includes a short explanation and a direct link to open it on its own page.</p>
-
-      <article id="viz-all-incidents" class="viz-section">
-        <h3>All Incidents by Location</h3>
-        <p>An overview map-like scatter of incidents that gives a first impression of where crime concentrates geographically.</p>
-        <img src="visualizations/All_incidents_by_location.png" alt="All incidents by location" />
-        <a class="open-link" href="visualizations/All_incidents_by_location.png">Open full visualization</a>
-      </article>
-
-      <article id="viz-focus-time" class="viz-section">
-        <h3>Focus Crimes Over Time</h3>
-        <p>A time-series perspective showing how selected categories move through years and where notable shifts appear.</p>
+    <section id="scene-1">
+      <h2>Scene 1: The Long-Term Trend</h2>
+      <article class="scene">
+        <div class="scene-meta">
+          <span class="chip">Visualization 1</span>
+          <span class="chip">Static Chart</span>
+        </div>
+        <h3>How Focus Crimes Shift Over Time</h3>
+        <p class="claim">Main point: the citywide trend changes, but totals alone do not explain the full pattern.</p>
+        <p>
+          This first figure establishes historical context. It shows how crime categories move across years and makes clear
+          that vehicle theft belongs to a broader long-term shift. This is the baseline for the rest of the story.
+        </p>
         <img src="visualizations/Focus_crimes_over_time.png" alt="Focus crimes over time" />
         <a class="open-link" href="visualizations/Focus_crimes_over_time.png">Open full visualization</a>
       </article>
+    </section>
 
-      <article id="viz-heatmap-district" class="viz-section">
-        <h3>Heatmap: Category vs District</h3>
-        <p>A matrix-style heatmap that compares category intensity across police districts for pattern spotting.</p>
-        <img src="visualizations/heatmap_assignment1.png" alt="Heatmap category vs district" />
-        <a class="open-link" href="visualizations/heatmap_assignment1.png">Open full visualization</a>
-      </article>
-
-      <article id="viz-jitter-theft" class="viz-section">
-        <h3>Jitter Plot: Theft &amp; Larceny</h3>
-        <p>A granular view of theft and larceny variation that reveals spread and local concentration points.</p>
-        <img src="visualizations/JitterPlot_Theft_Larceny.png" alt="Jitter plot theft and larceny" />
-        <a class="open-link" href="visualizations/JitterPlot_Theft_Larceny.png">Open full visualization</a>
-      </article>
-
-      <article id="viz-vehicle-ratio" class="viz-section">
-        <h3>Vehicle Theft Ratio Map</h3>
-        <p>An interactive district-level ratio map that highlights where vehicle theft is over- or under-represented.</p>
+    <section id="scene-2">
+      <h2>Scene 2: The Geography</h2>
+      <article class="scene">
+        <div class="scene-meta">
+          <span class="chip">Visualization 2</span>
+          <span class="chip">Map</span>
+        </div>
+        <h3>Vehicle Theft Ratio by District</h3>
+        <p class="claim">Main point: vehicle theft intensity is not uniform; some districts carry a much larger burden.</p>
+        <p>
+          The second scene moves from time to space. Instead of asking whether theft rose everywhere,
+          this map asks where theft is disproportionately concentrated relative to overall incidents.
+        </p>
         <iframe src="visualizations/vehicle_theft_ratio_map.html" title="Vehicle Theft Ratio Map"></iframe>
         <a class="open-link" href="visualizations/vehicle_theft_ratio_map.html">Open full visualization</a>
       </article>
+    </section>
 
-      <article id="viz-drug-scatter" class="viz-section">
-        <h3>Drug Offense Scatter Map</h3>
-        <p>An interactive point map focused on drug incidents to inspect local hotspots and urban clustering.</p>
-        <iframe src="visualizations/drug_offense_scatter_map.html" title="Drug Offense Scatter Map"></iframe>
-        <a class="open-link" href="visualizations/drug_offense_scatter_map.html">Open full visualization</a>
-      </article>
-
-      <article id="viz-theft-timeline" class="viz-section">
-        <h3>Theft Heatmap Timeline</h3>
-        <p>An animated heatmap showing how theft density moves over time across the city.</p>
-        <iframe src="visualizations/theft_heatmap_timeline.html" title="Theft Heatmap Timeline"></iframe>
-        <a class="open-link" href="visualizations/theft_heatmap_timeline.html">Open full visualization</a>
-      </article>
-
-      <article id="viz-hourly-year" class="viz-section">
-        <h3>Normalized Hourly Crime by Year</h3>
-        <p>An interactive hourly profile by year, useful for comparing temporal behavior between years.</p>
+    <section id="scene-3">
+      <h2>Scene 3: The Hourly Pattern</h2>
+      <article class="scene">
+        <div class="scene-meta">
+          <span class="chip">Visualization 3</span>
+          <span class="chip">Interactive Plotly</span>
+        </div>
+        <h3>Normalized Hourly Crime Profiles by Year</h3>
+        <p class="claim">Main point: timing changed too, suggesting that prevention should target different hours over time.</p>
+        <p>
+          The final scene compares hourly shape across years. Even when totals look similar, the timing profile
+          can shift. This matters for patrol strategy, prevention messaging, and how city resources are allocated.
+        </p>
         <iframe src="visualizations/normalized_hourly_crime_by_year.html" title="Normalized Hourly Crime by Year"></iframe>
         <a class="open-link" href="visualizations/normalized_hourly_crime_by_year.html">Open full visualization</a>
       </article>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <div class="card story-end">
+        Vehicle theft in San Francisco did not simply move up or down. It shifted across both district and time-of-day.
+        The takeaway is practical: a citywide total is useful for awareness, but targeted interventions require spatial and temporal detail.
+        A better strategy is to match response design to the specific neighborhoods and hours where risk is highest.
+      </div>
     </section>
   </main>
 </body>
